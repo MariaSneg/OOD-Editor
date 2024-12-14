@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{81fc0743-f9fa-4ee1-947d-c8b9440f0b85}</ProjectGuid>
+    <RootNamespace>Shapes</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Programming\SFML-2.6.1\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Programming\SFML-2.6.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-network-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Programming\SFML-2.6.1\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Programming\SFML-2.6.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-network-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\Button\DragAndDropButton\DragAndDropButton.cpp" />
+    <ClCompile Include="lib\Button\FillColorButton\FillColorButton.cpp" />
+    <ClCompile Include="lib\Button\FillColorButton\FillColorStateButton.cpp" />
+    <ClCompile Include="lib\Button\LoudShapeButton\BinLoudShapeButton.cpp" />
+    <ClCompile Include="lib\Button\LoudShapeButton\TextLoadShape.cpp" />
+    <ClCompile Include="lib\Button\NewShapeButton\NewRectangleButton.cpp" />
+    <ClCompile Include="lib\Button\NewShapeButton\NewTriangleButton.cpp" />
+    <ClCompile Include="lib\Button\SetOutlineButton\SetColor\SetOutlineColorButton.cpp" />
+    <ClCompile Include="lib\Button\SetOutlineButton\SetOutlineStateButton.cpp" />
+    <ClCompile Include="lib\Button\SetOutlineButton\SetThickness\SetOutlineThicknessButton.cpp" />
+    <ClCompile Include="lib\Button\Button.cpp" />
+    <ClCompile Include="lib\Button\WriteToFileButton\WriteToBInFileButton.cpp" />
+    <ClCompile Include="lib\Button\WriteToFileButton\WriteToTextFileButton.cpp" />
+    <ClCompile Include="lib\Command\DragAndDropCommand\DragAndDropCommand.cpp" />
+    <ClCompile Include="lib\Command\FillColorCommand\FillColorCommand.cpp" />
+    <ClCompile Include="lib\Command\FillColorCommand\FillColorStateCommand.cpp" />
+    <ClCompile Include="lib\Command\LoadShapeCommand\LoadShapeCommand.cpp" />
+    <ClCompile Include="lib\Command\NewShapeCommand\NewCircleCommand.cpp" />
+    <ClCompile Include="lib\Command\NewShapeCommand\NewRectangleCommand.cpp" />
+    <ClCompile Include="lib\Command\NewShapeCommand\NewTriangleCommand.cpp" />
+    <ClCompile Include="lib\Command\SetOutlineCommand\SetOutlineColorCommand.cpp" />
+    <ClCompile Include="lib\Command\SetOutlineCommand\SetOutlineStateCommand.cpp" />
+    <ClCompile Include="lib\Command\SetOutlineCommand\SetOutlineThicknessCommand.cpp" />
+    <ClCompile Include="lib\Command\WriteToFileCommand\WriteToFileCommand.cpp" />
+    <ClCompile Include="lib\Command\WriteToFileCommand\WriteToFileStrategy\WriteToBinFileStrategy.cpp" />
+    <ClCompile Include="lib\Command\WriteToFileCommand\WriteToFileStrategy\WriteToTextFileStrategy.cpp" />
+    <ClCompile Include="lib\DrawDecorator\DrawDecorator.cpp" />
+    <ClCompile Include="lib\CommandHandler.cpp" />
+    <ClCompile Include="lib\Composite\Composite.cpp" />
+    <ClCompile Include="lib\DrawDecorator\WithoutFrameDecorator.cpp" />
+    <ClCompile Include="lib\History\History.cpp" />
+    <ClCompile Include="lib\History\Memento.cpp" />
+    <ClCompile Include="lib\PerimeterAreaDecorator\CircleDecorator.cpp" />
+    <ClCompile Include="lib\PerimeterAreaDecorator\RectangleDecorator.cpp" />
+    <ClCompile Include="lib\PerimeterAreaDecorator\TriangleDecorator.cpp" />
+    <ClCompile Include="lib\ShapeBuilder\Builder.cpp" />
+    <ClCompile Include="lib\ShapeBuilder\CircleBuilder.cpp" />
+    <ClCompile Include="lib\ShapeBuilder\RectangleBuilder.cpp" />
+    <ClCompile Include="lib\ShapeBuilder\ShapeDirector\ShapeDirector.cpp" />
+    <ClCompile Include="lib\ShapeBuilder\TriangleBuilder.cpp" />
+    <ClCompile Include="lib\ShapeLoader\BinShapeLoader.cpp" />
+    <ClCompile Include="lib\ShapeLoader\ShapeLoader.cpp" />
+    <ClCompile Include="lib\ShapeLoader\TextShapeLoader.cpp" />
+    <ClCompile Include="lib\Shape\Circle.cpp" />
+    <ClCompile Include="lib\Shape\Rectangle.cpp" />
+    <ClCompile Include="lib\Shape\Triangle.cpp" />
+    <ClCompile Include="lib\PerimeterAreaDecorator\PerimeterAreaDecorator.cpp" />
+    <ClCompile Include="lib\Button\NewShapeButton\NewCircleButton.cpp" />
+    <ClCompile Include="lib\State\FillColorState.cpp" />
+    <ClCompile Include="lib\State\DragAndDropState.cpp" />
+    <ClCompile Include="lib\State\SetOutlineState.cpp" />
+    <ClCompile Include="lib\State\State.cpp" />
+    <ClCompile Include="lib\Toolbar.cpp" />
+    <ClCompile Include="lib\Visitor\FillColorVisitor.cpp" />
+    <ClCompile Include="lib\Visitor\SetOutlineVisitor.cpp" />
+    <ClCompile Include="Shapes.cpp" />
+    <ClCompile Include="lib\DrawDecorator\WithFrameDecorator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\Button\DragAndDropButton\DragAndDropButton.h" />
+    <ClInclude Include="lib\Button\FillColorButton\FillColorButton.h" />
+    <ClInclude Include="lib\Button\FillColorButton\FillColorStateButton.h" />
+    <ClInclude Include="lib\Button\LoudShapeButton\BinLoudShapeButton.h" />
+    <ClInclude Include="lib\Button\LoudShapeButton\TextLoadShape.h" />
+    <ClInclude Include="lib\Button\NewShapeButton\NewRectangleButton.h" />
+    <ClInclude Include="lib\Button\NewShapeButton\NewTriangleButton.h" />
+    <ClInclude Include="lib\Button\SetOutlineButton\SetColor\SetOutlineColorButton.h" />
+    <ClInclude Include="lib\Button\SetOutlineButton\SetOutlineStateButton.h" />
+    <ClInclude Include="lib\Button\SetOutlineButton\SetThickness\SetOutlineThicknessButton.h" />
+    <ClInclude Include="lib\Button\Button.h" />
+    <ClInclude Include="lib\Button\IButton.h" />
+    <ClInclude Include="lib\Button\WriteToFileButton\WriteToBInFileButton.h" />
+    <ClInclude Include="lib\Button\WriteToFileButton\WriteToTextFileButton.h" />
+    <ClInclude Include="lib\Command\DragAndDropCommand\DragAndDropCommand.h" />
+    <ClInclude Include="lib\Command\FillColorCommand\FillColorCommand.h" />
+    <ClInclude Include="lib\Command\FillColorCommand\FillColorStateCommand.h" />
+    <ClInclude Include="lib\Command\ICommand.h" />
+    <ClInclude Include="lib\Command\LoadShapeCommand\LoadShapeCommand.h" />
+    <ClInclude Include="lib\Command\NewShapeCommand\NewCircleCommand.h" />
+    <ClInclude Include="lib\Command\NewShapeCommand\NewRectangleCommand.h" />
+    <ClInclude Include="lib\Command\NewShapeCommand\NewTriangleCommand.h" />
+    <ClInclude Include="lib\Command\SetOutlineCommand\SetOutlineColorCommand.h" />
+    <ClInclude Include="lib\Command\SetOutlineCommand\SetOutlineStateCommand.h" />
+    <ClInclude Include="lib\Command\SetOutlineCommand\SetOutlineThicknessCommand.h" />
+    <ClInclude Include="lib\Command\WriteToFileCommand\WriteToFileCommand.h" />
+    <ClInclude Include="lib\Command\WriteToFileCommand\WriteToFileStrategy\IWriteToFileStrategy.h" />
+    <ClInclude Include="lib\Command\WriteToFileCommand\WriteToFileStrategy\WriteToBinFileStrategy.h" />
+    <ClInclude Include="lib\Command\WriteToFileCommand\WriteToFileStrategy\WriteToTextFileStrategy.h" />
+    <ClInclude Include="lib\DrawDecorator\DrawDecorator.h" />
+    <ClInclude Include="lib\CommandHandler.h" />
+    <ClInclude Include="lib\Composite\Composite.h" />
+    <ClInclude Include="lib\DrawDecorator\IDrawDecorator.h" />
+    <ClInclude Include="lib\DrawDecorator\WithoutFrameDecorator.h" />
+    <ClInclude Include="lib\ShapeBuilder\Builder.h" />
+    <ClInclude Include="lib\ShapeBuilder\CircleBuilder.h" />
+    <ClInclude Include="lib\ShapeBuilder\IBuilder.h" />
+    <ClInclude Include="lib\ShapeBuilder\RectangleBuilder.h" />
+    <ClInclude Include="lib\ShapeBuilder\ShapeDirector\ShapeDirector.h" />
+    <ClInclude Include="lib\History\History.h" />
+    <ClInclude Include="lib\History\Memento.h" />
+    <ClInclude Include="lib\PerimeterAreaDecorator\CircleDecorator.h" />
+    <ClInclude Include="lib\PerimeterAreaDecorator\IPerimeterAreaDecorator.h" />
+    <ClInclude Include="lib\PerimeterAreaDecorator\RectangleDecorator.h" />
+    <ClInclude Include="lib\PerimeterAreaDecorator\TriangleDecorator.h" />
+    <ClInclude Include="lib\ShapeBuilder\TriangleBuilder.h" />
+    <ClInclude Include="lib\ShapeLoader\BinShapeLoader.h" />
+    <ClInclude Include="lib\ShapeLoader\ShapeLoader.h" />
+    <ClInclude Include="lib\ShapeLoader\TextShapeLoader.h" />
+    <ClInclude Include="lib\Shape\Circle.h" />
+    <ClInclude Include="lib\Shape\IShape.h" />
+    <ClInclude Include="lib\Shape\Rectangle.h" />
+    <ClInclude Include="lib\Shape\Triangle.h" />
+    <ClInclude Include="lib\DrawDecorator\WithFrameDecorator.h" />
+    <ClInclude Include="lib\PerimeterAreaDecorator\PerimeterAreaDecorator.h" />
+    <ClInclude Include="lib\State\FillColorState.h" />
+    <ClInclude Include="lib\State\IState.h" />
+    <ClInclude Include="lib\State\DragAndDropState.h" />
+    <ClInclude Include="lib\State\SetOutlineState.h" />
+    <ClInclude Include="lib\State\State.h" />
+    <ClInclude Include="lib\Toolbar.h" />
+    <ClInclude Include="lib\Button\NewShapeButton\NewCircleButton.h" />
+    <ClInclude Include="lib\ToolbarIncludes.h" />
+    <ClInclude Include="lib\Visitor\FillColorVisitor.h" />
+    <ClInclude Include="lib\Visitor\IVisitor.h" />
+    <ClInclude Include="lib\Visitor\SetOutlineVisitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openal32.dll" />
+    <None Include="sfml-audio-2.dll" />
+    <None Include="sfml-audio-d-2.dll" />
+    <None Include="sfml-graphics-2.dll" />
+    <None Include="sfml-graphics-d-2.dll" />
+    <None Include="sfml-network-2.dll" />
+    <None Include="sfml-network-d-2.dll" />
+    <None Include="sfml-system-2.dll" />
+    <None Include="sfml-system-d-2.dll" />
+    <None Include="sfml-window-2.dll" />
+    <None Include="sfml-window-d-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
