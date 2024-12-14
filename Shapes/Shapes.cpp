@@ -33,9 +33,7 @@ int main()
     CommandHandler* handler = CommandHandler::GetInstance(window, input, output);
 
     handler->ReadShapes();
-
     handler->PrintShapes();
-
     handler->DrawShapes();
 
     return 0;
