@@ -6,7 +6,9 @@ std::map<std::string, int> textShapeLoaderMap
 {
     {"CIRCLE", 1},
     {"TRIANGLE", 2},
-    {"RECTANGLE", 3}
+    {"RECTANGLE", 3},
+    {"COMPOSITE", 4},
+    {"END", 5}
 };
 
 TextShapeLoader::TextShapeLoader(std::string fileName)
@@ -36,27 +38,8 @@ void TextShapeLoader::Parse(std::vector<std::string> data)
         case 1: AddCircle(ss); break;
         case 2: AddTriangle(ss); break;
         case 3: AddRectangle(ss); break;
+        case 4: CreateComposite(); break;
+        case 5: AddComposite(); break;
         }
     }
-}
-
-void TextShapeLoader::AddCircle(std::istringstream& ss)
-{
-    CircleBuilder builder = CircleBuilder(ss);
-    m_director.MakeCircle(builder);
-    m_shapes.push_back(builder.GetResult());
-}
-
-void TextShapeLoader::AddTriangle(std::istringstream& ss)
-{
-    TriangleBuilder builder = TriangleBuilder(ss);
-    m_director.MakeTriangle(builder);
-    m_shapes.push_back(builder.GetResult());
-}
-
-void TextShapeLoader::AddRectangle(std::istringstream& ss)
-{
-    RectangleBuilder builder = RectangleBuilder(ss);
-    m_director.MakeRectangle(builder);
-    m_shapes.push_back(builder.GetResult());
 }

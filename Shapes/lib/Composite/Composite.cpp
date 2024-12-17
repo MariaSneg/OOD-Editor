@@ -193,12 +193,12 @@ void Composite::Accept(std::shared_ptr<IVisitor> visitor)
 
 std::string Composite::ToString()
 {
-    std::string data = "COMPOSITE:";
+    std::string data = "COMPOSITE:\n";
     for (auto child : m_children)
     {
         data += child->ToString();
     }
-    data += "END";
+    data += "END\n";
     return data;
 }
 

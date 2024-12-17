@@ -4,7 +4,7 @@ BinLoadShapeButton::BinLoadShapeButton(sf::Vector2f position)
 	:Button(position)
 {
 	sf::Texture* texture = new sf::Texture();
-	texture->loadFromFile("C:/Programming/ood/Shapes4/Shapes/binFile.png");
+	texture->loadFromFile("C:/Programming/ood/Shapes4/Shapes/binFileImport.png");
 	m_texture = texture;
 
 	sf::RectangleShape* button = new sf::RectangleShape(sf::Vector2f(20, 20));

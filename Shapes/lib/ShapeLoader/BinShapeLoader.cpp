@@ -6,7 +6,9 @@ std::map<std::string, int> binShapeLoaderMap
 {
     {"CIRCLE", 1},
     {"TRIANGLE", 2},
-    {"RECTANGLE", 3}
+    {"RECTANGLE", 3},
+    {"COMPOSITE", 4},
+    {"END", 5}
 };
 
 BinShapeLoader::BinShapeLoader(std::string fileName)
@@ -51,27 +53,8 @@ void BinShapeLoader::Parse(std::vector<std::string> data)
         case 1: AddCircle(ss); break;
         case 2: AddTriangle(ss); break;
         case 3: AddRectangle(ss); break;
+        case 4: CreateComposite(); break;
+        case 5: AddComposite(); break;
         }
     }
-}
-
-void BinShapeLoader::AddCircle(std::istringstream& line)
-{
-    CircleBuilder builder = CircleBuilder(line);
-    m_director.MakeCircle(builder);
-    m_shapes.push_back(builder.GetResult());
-}
-
-void BinShapeLoader::AddTriangle(std::istringstream& line)
-{
-    TriangleBuilder builder = TriangleBuilder(line);
-    m_director.MakeTriangle(builder);
-    m_shapes.push_back(builder.GetResult());
-}
-
-void BinShapeLoader::AddRectangle(std::istringstream& line)
-{
-    RectangleBuilder builder = RectangleBuilder(line);
-    m_director.MakeRectangle(builder);
-    m_shapes.push_back(builder.GetResult());
 }
